@@ -1,6 +1,7 @@
 <?php
+    include 'display_errors.php';
 // Conexión a la base de datos
-    require('php/connection_bd.php');
+include 'connection_bd.php';
 // Obtener datos del formulario
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
@@ -27,3 +28,4 @@ if (empty($nombre) || empty($apellidos) || empty($correo) || empty($contrasena))
 
 //$conn->close();
 ?>
+
