@@ -1,11 +1,7 @@
 <?php
     include 'display_errors.php';
 // Conexión a la base de datos
-<<<<<<< HEAD
 include 'connection_bd.php';
-=======
-    require('connection_bd.php');
->>>>>>> ae3071e (cambio de estilos)
 // Obtener datos del formulario
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
