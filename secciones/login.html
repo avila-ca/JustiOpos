@@ -7,20 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div class="container">
-        <h1>Login</h1>
-       <form action="php/login.php" method="post" id="loginform">
-        <label for="mail" class="form-label">Email
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">Inicio de sesión</h2>
+    <form action="php/login.php" method="post" id="loginform">
+        <div class="mb-3">
+        <label for="mail" class="form-label">Email</label>
             <input type="email" class="form-control" required autofocus name="mail" id="mail" placeholder="testopos@testopos.es">
-        </label>
-        <label for="pass" class="form-label">Password 
+        </div>
+        <div class="mb-3">
+
+        <label for="pass" class="form-label">Password</label>
             <input type="password" class="form-control"  id="pass" required name="pass" placeholder="Contraseña">
-        </label>
-        <button type="submit" id="enviar" name="enviar" class="btn btn-primary btn-lg">Iniciar sesión</button>
+            </div>
+        <button type="submit" id="enviar" name="enviar" class="btn btn-primary">Iniciar sesión</button>
         </form>
-    <p id="message"></p>
-  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</h2>
+</div>
 </body>
 </html>
 
