@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $seccion = "inicio.html";
     if (isset($_GET['s'])){
         $seccion = $_GET['s'];
@@ -17,8 +18,17 @@
 </head>
 <body>
     <div class="container">
-        <?php require("secciones/header.html"); ?>
-        <?php if ($seccion!="registro.html" && $seccion != "login.html"){require("secciones/nav.html");} ?>
+        <?php 
+        echo 'hola    name = '.isset($_SESSION['name']).' islogged = '.isset($_SESSION['islogged']),$seccion;
+        if (isset($_SESSION['islogged'])){
+             require("secciones/headerOut.html");
+        }else{
+            require ("secciones/headerIn.html");
+        }
+        if ($seccion!="registro.html" && $seccion != "login.html"){
+            require("secciones/nav.html");
+        }
+        ?>
         <main>
             <?php require("secciones/$seccion");?>
             <?php if($seccion=="inicio.html"){require("secciones/tarjeta.html");} ?>

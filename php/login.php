@@ -4,11 +4,11 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         include 'connection_bd.php';
         session_start();
-
+        echo 'yeahh';
         $mail = mysqli_real_escape_string($conn, $_POST["mail"]);
         $pass = mysqli_real_escape_string($conn, hash("sha512", $_POST["pass"]));
 
-        $query = "SELECT id, email, password FROM usuarios WHERE email = ?";
+        $query = "SELECT id, nombre, email, password FROM usuarios WHERE email = ?";
         
         $stmt = $conn->prepare($query);
         $stmt->bind_param("s", $mail);
@@ -20,7 +20,9 @@
            
            if ($pass == $row["password"]){
             $_SESSION["usuario_id"] = $row["id"];
-            echo "de lujo...";
+            $_SESSION['name'] = $row['nombre'];
+            $_SESSION['islogged'] = true;
+            header("Location: ../index.php");
            }else{
             echo "pass incorrecto";
            }
