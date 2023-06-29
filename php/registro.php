@@ -3,6 +3,7 @@
 // Conexión a la base de datos
 include 'connection_bd.php';
 // Obtener datos del formulario
+session_start();
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
 $correo = $_POST["correo"];
@@ -18,6 +19,9 @@ if (empty($nombre) || empty($apellidos) || empty($correo) || empty($contrasena))
     $stmt->bind_param("ssss", $nombre, $apellidos, $correo, $contrasena);
     
     if ($stmt->execute()) {
+        $_SESSION['mail'] = $_POST['correo'];
+        $_SESSION['contrasena'] = $_POST['contrasena'];
+        header("Location: login.php");
         echo "Registro exitoso. ¡Bienvenido!";
     } else {
         echo "Error en el registro: " . $stmt->error;
@@ -26,6 +30,6 @@ if (empty($nombre) || empty($apellidos) || empty($correo) || empty($contrasena))
     $stmt->close();
 }
 
-//$conn->close();
+$conn->close();
 ?>
 

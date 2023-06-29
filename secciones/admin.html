@@ -1,0 +1,89 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Añada su pregunta</h2>
+              <form action="php/admin.php" method="post">
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <label for="tema" class="form-label">Tema</label>
+                        <select class="form-select form-select-lg" name="tema" id="tema">
+                            <option selected>Select one</option>
+                            <option value="">New Delhi</option>
+                            <option value="">Istanbul</option>
+                            <option value="">Jakarta</option>
+                        </select>
+                    </div>
+                  </div>
+                <div class="mb-3">
+                  <label for="pregunta" class="form-label">Pregunta</label>
+                  <input
+                    type="text"
+                    name="pregunta"
+                    placeholder="Pregunta"
+                    required
+                  /><br />
+                </div>
+                <div class="mb-3">
+                  <label for="opcion1" class="form-label">Opcion 1</label>
+                  <input
+                    type="text"
+                    name="opcion1"
+                    placeholder="Opción 1"
+                    required
+                  /><br />
+                </div>
+                <div class="mb-3">
+                  <label for="opcion2" class="form-label">Opcion 2</label>
+                  <input
+                    type="text"
+                    name="opcion2"
+                    placeholder="Opción 2"
+                    required
+                  /><br />
+                </div>
+                <div class="mb-3">
+                  <label for="opcion3" class="form-label">Opcion 3</label>
+                  <input
+                    type="text"
+                    name="opcion3"
+                    placeholder="Opción 3"
+                    required
+                  /><br />
+                </div>
+                <div class="mb-3">
+                  <label for="opcion4" class="form-label">Opcion 4</label>
+                  <input
+                    type="text"
+                    name="opcion4"
+                    placeholder="Opción 4"
+                    required
+                  /><br />
+                </div>
+                <div class="mb-3">
+                  <label for="opcion_correcta" class="form-label"
+                    >Opcion correcta</label
+                  >
+                  <input
+                    type="text"
+                    name="opcion_correcta"
+                    placeholder="Opción correcta (1-4)"
+                    required
+                  /><br />
+                </div>
+  
+                <input
+                  type="submit"
+                  value="Guardar pregunta"
+                  class="btn btn-primary btn-lg"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
