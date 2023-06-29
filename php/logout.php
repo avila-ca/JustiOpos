@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo 'logoustsadsadasdasdad';
 unset($_SESSION["usuario_id"]);
 unset($_SESSION['name']);
 unset($_SESSION['logged_in']);

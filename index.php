@@ -5,8 +5,7 @@ session_start();
 $seccion = "inicio.html";
 if (isset($_GET['s'])) {
     $seccion = $_GET['s'];
-}
-if($_SESSION['usuario_id'] == 3){
+}elseif(isset($_SESSION['usuario_id']) && $_SESSION['usuario_id'] == 3){
     $seccion = 'admin.html';
 }
 ?>
